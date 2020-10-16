@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-LABEL maintainer="Unicon, Inc."
+LABEL maintainer="crayonluffy@gmail.com"
 
 RUN yum -y install epel-release \
     && yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
@@ -19,7 +19,7 @@ RUN ssp_version=1.18.4; \
     && mv simplesamlphp-$ssp_version simplesamlphp \
     && rm /simplesamlphp-$ssp_version.tar.gz
 
-RUN echo $'\nSetEnv SIMPLESAMLPHP_CONFIG_DIR /var/simplesamlphp/config\nAlias /simplesaml /var/simplesamlphp/www\n \
+RUN echo $'\nSetEnv SIMPLESAMLPHP_CONFIG_DIR /var/simplesamlphp/config\n \
 <Directory /var/simplesamlphp/www>\n \
     Require all granted\n \
 </Directory>\n' \

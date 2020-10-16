@@ -1,0 +1,13 @@
+version: '3'
+
+volumes:
+  data:
+
+services:
+  saml:
+    build: ./
+    volumes:
+      - data:/var/simplesamlphp
+    ports:
+      - 80
+    restart: always
