@@ -5,7 +5,7 @@ image := simplesamlphp
 tag := latest
 repo_or_dir := $$PWD
 
-runtime_image := simplesamlphp
+runtime_image := simplesamlphp-runtime
 
 # Prepare the S2I builder and runtime images
 .PHONY: s2i
