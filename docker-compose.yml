@@ -5,9 +5,11 @@ volumes:
 
 services:
   saml:
-    build: ./
+    image: lib-simplesamlphp/simplesamlphp:latest
+    environment:
+      - SIMPLESAML_DIR=/var/simplesamlphp
     volumes:
       - data:/var/simplesamlphp
     ports:
-      - 80
+      - 8080
     restart: always
